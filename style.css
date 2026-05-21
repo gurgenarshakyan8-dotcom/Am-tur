@@ -1,17 +1,96 @@
-.qr-section {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: #0b0f1a;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center/cover;
+  opacity: 0.25;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 40px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.cars {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.car-card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 15px;
+  width: 220px;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slider img {
+  width: 80%;
+  border-radius: 15px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ffd700;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qr-section {
+  margin-top: 50px;
   padding: 20px;
   background: rgba(255,255,255,0.05);
   border-radius: 15px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
 }
 
 .qr-section h2 {
   color: #ffd700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .qr-section img {
@@ -20,6 +99,4 @@
   background: white;
   padding: 8px;
   border-radius: 10px;
-  display: block;
-  margin: 0 auto;
 }
