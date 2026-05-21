@@ -20,3 +20,22 @@
   background: white;
   padding: 10px;
 }
+.qr-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(0.9);
+}
+
+.qr-section img {
+  width: 160px;
+  height: 160px;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+}
