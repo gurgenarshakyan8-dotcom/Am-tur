@@ -8,7 +8,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
-  background: #0b0f1a;
+  background: #05070f;
   color: white;
 }
 
@@ -21,82 +21,167 @@ html, body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center/cover;
-  opacity: 0.25;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
   position: relative;
   z-index: 2;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   text-align: center;
 }
 
-h1 {
-  font-size: 48px;
-  color: #ffd700;
-  margin-bottom: 10px;
+/* TOP */
+
+.top-bar {
+  padding-top: 40px;
+  margin-bottom: 50px;
 }
 
-p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #ddd;
+.top-bar h1 {
+  font-size: 80px;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
+
+.top-bar p {
+  font-size: 28px;
+  color: #eee;
+  margin-top: 10px;
+}
+
+/* CARS */
 
 .cars {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .car-card {
-  background: rgba(255,255,255,0.08);
-  padding: 15px;
-  border-radius: 15px;
-  width: 220px;
+  width: 280px;
+  transition: 0.4s;
 }
 
 .car-card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.slider img {
-  width: 80%;
-  border-radius: 15px;
+.car-card:hover {
+  transform: translateY(-12px);
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #ffd700;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* TITLE */
 
-.qr-section {
-  margin-top: 50px;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  display: inline-block;
-}
-
-.qr-section h2 {
+.section-title {
+  font-size: 48px;
   color: #ffd700;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
-.qr-section img {
-  width: 150px;
-  height: 150px;
-  background: white;
-  padding: 8px;
-  border-radius: 10px;
+/* PLACES */
+
+.places {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.place-card {
+  width: 280px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+  backdrop-filter: blur(5px);
+}
+
+.place-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.place-card h3 {
+  padding: 20px;
+  font-size: 28px;
+}
+
+.place-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CONTACT */
+
+.contact-section {
+  margin-top: 50px;
+  padding-bottom: 80px;
+}
+
+.contact-section h2 {
+  font-size: 42px;
+  color: #ffd700;
+  margin-bottom: 30px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons a {
+  padding: 16px 35px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.contact-buttons a:hover {
+  background: rgba(255,215,0,0.15);
+  transform: translateY(-5px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .top-bar h1 {
+    font-size: 52px;
+  }
+
+  .top-bar p {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .contact-section h2 {
+    font-size: 30px;
+  }
+
+  .car-card,
+  .place-card {
+    width: 90%;
+  }
+
 }
