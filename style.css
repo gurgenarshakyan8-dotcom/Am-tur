@@ -65,14 +65,14 @@ body{
 /* CARS */
 
 .cars{
-  display:flex;
-  justify-content:center;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
   gap:25px;
-  flex-wrap:wrap;
+  align-items:center;
 }
 
 .car-card{
-  width:320px;
+  width:100%;
   transition:0.4s;
 }
 
@@ -158,10 +158,13 @@ body{
   font-size:42px;
 }
 
-.car-card,
 .place-card{
   width:90%;
   min-width:90%;
+}
+
+.cars{
+  grid-template-columns:1fr;
 }
 
 }
