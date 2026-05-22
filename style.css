@@ -127,6 +127,11 @@ body{
 
 /* CARS */
 
+.cars-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 .cars{
   display:grid;
 
@@ -137,7 +142,7 @@ body{
 
   align-items:end;
 
-  width:100%;
+  width:min(100%,1200px);
 }
 
 .car-card{
