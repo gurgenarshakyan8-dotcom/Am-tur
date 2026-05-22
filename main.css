@@ -36,7 +36,9 @@ body{
   position:relative;
   z-index:2;
 
-  width:min(92vw,1500px);
+  width:96vw;
+
+  max-width:none;
 
   margin:auto;
 }
@@ -104,7 +106,7 @@ body{
 }
 
 .hero-text h1{
-  font-size:clamp(60px,10vw,150px);
+  font-size:clamp(60px,10vw,170px);
 
   color:#ffd700;
 
@@ -140,9 +142,11 @@ body{
 
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
 
   gap:1.2vw;
+
+  align-items:stretch;
 }
 
 .car-card{
@@ -154,11 +158,11 @@ body{
 .car-card img{
   width:100%;
 
-  aspect-ratio:1.5/1;
+  aspect-ratio:16/10;
 
   object-fit:cover;
 
-  border-radius:1.4vw;
+  border-radius:1.2vw;
 
   border:1px solid rgba(255,215,0,0.18);
 
@@ -178,7 +182,7 @@ body{
 
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
 
   gap:1.2vw;
 }
@@ -188,7 +192,7 @@ body{
 
   border:1px solid rgba(255,215,0,0.15);
 
-  border-radius:1.4vw;
+  border-radius:1.2vw;
 
   padding:2vw 1vw;
 
@@ -249,13 +253,13 @@ body{
 }
 
 .place-card{
-  min-width:min(26vw,340px);
+  min-width:min(24vw,360px);
 
   background:rgba(255,255,255,0.06);
 
   border:1px solid rgba(255,215,0,0.14);
 
-  border-radius:1.5vw;
+  border-radius:1.4vw;
 
   overflow:hidden;
 
@@ -356,8 +360,16 @@ body{
   margin-bottom:30px;
 }
 
+.hero-text h1{
+  font-size:72px;
+}
+
+.hero-text p{
+  font-size:20px;
+}
+
 .cars{
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
 
   gap:12px;
 }
@@ -367,7 +379,7 @@ body{
 }
 
 .info-boxes{
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
 
   gap:12px;
 
@@ -390,6 +402,7 @@ body{
 
 .place-card{
   min-width:80%;
+
   border-radius:22px;
 }
 
