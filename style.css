@@ -38,6 +38,37 @@ body{
   max-width:1500px;
   margin:auto;
 }
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.logo h2{
+  color:#ffd700;
+  font-size:42px;
+  text-shadow:0 0 15px rgba(255,215,0,0.5);
+}
+
+.navbar ul{
+  display:flex;
+  list-style:none;
+  gap:28px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  color:#ffd700;
+}
 
 /* HERO TOP */
 
