@@ -31,12 +31,13 @@ body{
   background-position:center;
   background-attachment:fixed;
 }
-
 .content{
   position:relative;
   z-index:2;
-  max-width:1500px;
+  width:100%;
+  max-width:1280px;
   margin:auto;
+}
 }
 /* NAVBAR */
 
@@ -108,8 +109,8 @@ body{
 .cars{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:28px;
-  align-items:center;
+  gap:18px;
+  align-items:end;
 }
 
 .car-card{
@@ -119,7 +120,7 @@ body{
 
 .car-card img{
   width:100%;
-  height:260px;
+  height:220px;
   object-fit:cover;
   border-radius:28px;
 
@@ -215,16 +216,17 @@ body{
 }
 
 .hero-text{
-  margin-bottom:40px;
+  margin-bottom:60px;
 }
 
 .hero-text h1{
-  font-size:68px;
-  letter-spacing:2px;
+  font-size:110px;
+  letter-spacing:4px;
+  line-height:1;
 }
 
 .hero-text p{
-  font-size:20px;
+  font-size:28px;
 }
 
 .cars{
