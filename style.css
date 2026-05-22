@@ -16,7 +16,7 @@ body{
 .hero{
   position:relative;
   min-height:auto;
-  padding:20px 20px 50px;
+  padding:20px 20px 60px;
 }
 
 .overlay{
@@ -38,6 +38,7 @@ body{
   width:100%;
   max-width:1280px;
   margin:auto;
+  padding-inline:10px;
 }
 
 /* NAVBAR */
@@ -51,7 +52,8 @@ body{
 
 .logo h2{
   color:#ffd700;
-  font-size:42px;
+
+  font-size:clamp(28px,3vw,42px);
 
   text-shadow:
   0 0 15px rgba(255,215,0,0.5);
@@ -61,12 +63,15 @@ body{
   display:flex;
   list-style:none;
   gap:28px;
+  flex-wrap:wrap;
 }
 
 .navbar a{
   color:white;
   text-decoration:none;
-  font-size:18px;
+
+  font-size:clamp(14px,1vw,18px);
+
   transition:0.3s;
 }
 
@@ -81,19 +86,23 @@ body{
   display:flex;
   flex-direction:column;
   justify-content:center;
+
   padding-top:10px;
   padding-bottom:20px;
 }
 
 .hero-text{
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:50px;
 }
 
 .hero-text h1{
-  font-size:110px;
+  font-size:clamp(60px,9vw,120px);
+
   color:#ffd700;
-  letter-spacing:4px;
+
+  letter-spacing:clamp(2px,0.5vw,6px);
+
   line-height:1;
 
   text-shadow:
@@ -103,9 +112,12 @@ body{
 }
 
 .hero-text p{
-  margin-top:15px;
-  font-size:28px;
+  margin-top:14px;
+
+  font-size:clamp(18px,2vw,30px);
+
   color:white;
+
   letter-spacing:2px;
 }
 
@@ -114,9 +126,10 @@ body{
 .cars{
   display:grid;
   grid-template-columns:repeat(4,1fr);
+
   gap:18px;
+
   align-items:end;
-  margin-top:-20px;
 }
 
 .car-card{
@@ -126,8 +139,13 @@ body{
 
 .car-card img{
   width:100%;
-  height:220px;
+
+  aspect-ratio:16/10;
+
+  height:auto;
+
   object-fit:cover;
+
   border-radius:28px;
 
   border:1px solid rgba(255,215,0,0.18);
@@ -144,13 +162,16 @@ body{
 /* PLACES */
 
 .places-section{
-  margin-top:80px;
+  margin-top:90px;
 }
 
 .section-title{
   text-align:center;
-  font-size:54px;
+
+  font-size:clamp(36px,5vw,62px);
+
   color:#ffd700;
+
   margin-bottom:45px;
 
   text-shadow:
@@ -159,9 +180,13 @@ body{
 
 .places-slider{
   display:flex;
+
   gap:24px;
+
   overflow-x:auto;
+
   padding-bottom:22px;
+
   scroll-behavior:smooth;
 }
 
@@ -175,13 +200,14 @@ body{
 }
 
 .place-card{
-  min-width:320px;
+  min-width:min(320px,85vw);
 
   background:rgba(255,255,255,0.06);
 
   border:1px solid rgba(255,215,0,0.14);
 
   border-radius:28px;
+
   overflow:hidden;
 
   transition:0.45s;
@@ -194,13 +220,19 @@ body{
 
 .place-card img{
   width:100%;
-  height:360px;
+
+  aspect-ratio:4/5;
+
+  height:auto;
+
   object-fit:cover;
 }
 
 .place-card h3{
   padding:22px;
-  font-size:28px;
+
+  font-size:clamp(20px,2vw,30px);
+
   color:white;
 }
 
@@ -216,10 +248,6 @@ body{
   overflow-x:hidden;
 }
 
-.content{
-  width:100%;
-}
-
 .navbar{
   flex-direction:column;
   gap:18px;
@@ -227,58 +255,25 @@ body{
 }
 
 .navbar ul{
-  flex-wrap:wrap;
   justify-content:center;
   gap:14px;
 }
 
-.logo h2{
-  font-size:34px;
-}
-
 .hero{
-  padding:20px 14px 60px;
-}
-
-.hero-top{
-  min-height:auto;
-  padding-top:10px;
+  padding:20px 14px 50px;
 }
 
 .hero-text{
   margin-bottom:35px;
 }
 
-.hero-text h1{
-  font-size:68px;
-  letter-spacing:2px;
-}
-
-.hero-text p{
-  font-size:20px;
-}
-
 .cars{
-  display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:12px;
-  margin-top:0;
-}
-
-.car-card{
-  width:100%;
-  min-width:auto;
 }
 
 .car-card img{
-  width:100%;
-  height:140px;
   border-radius:18px;
-}
-
-.section-title{
-  font-size:40px;
-  margin-bottom:30px;
 }
 
 .places-slider{
@@ -287,15 +282,6 @@ body{
 
 .place-card{
   min-width:280px;
-}
-
-.place-card img{
-  height:260px;
-}
-
-.place-card h3{
-  font-size:22px;
-  padding:18px;
 }
 
 }
