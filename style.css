@@ -48,6 +48,7 @@ body{
   justify-content:space-between;
   align-items:center;
   margin-bottom:30px;
+  gap:20px;
 }
 
 .logo h2{
@@ -83,12 +84,15 @@ body{
 
 .hero-top{
   min-height:auto;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
 
   padding-top:10px;
   padding-bottom:20px;
+
+  overflow:hidden;
 }
 
 .hero-text{
@@ -125,11 +129,15 @@ body{
 
 .cars{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
 
   gap:18px;
 
   align-items:end;
+
+  width:100%;
 }
 
 .car-card{
@@ -140,7 +148,7 @@ body{
 .car-card img{
   width:100%;
 
-  aspect-ratio:16/10;
+  aspect-ratio:1.5/1;
 
   height:auto;
 
@@ -250,7 +258,6 @@ body{
 
 .navbar{
   flex-direction:column;
-  gap:18px;
   text-align:center;
 }
 
