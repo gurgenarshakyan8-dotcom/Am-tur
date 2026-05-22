@@ -24,16 +24,17 @@ html, body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.82)),
-    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1800&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?q=80&w=2000&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .content {
   position: relative;
   z-index: 2;
-  max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
   text-align: center;
 }
@@ -41,21 +42,21 @@ html, body {
 /* TOP */
 
 .top-bar {
-  padding-top: 50px;
-  margin-bottom: 70px;
+  padding-top: 90px;
+  margin-bottom: 90px;
 }
 
 .top-bar h1 {
-  font-size: 90px;
+  font-size: 110px;
   color: #ffd700;
-  letter-spacing: 4px;
-  text-shadow: 0 0 25px rgba(255,215,0,0.45);
+  letter-spacing: 5px;
+  text-shadow: 0 0 30px rgba(255,215,0,0.55);
 }
 
 .top-bar p {
   margin-top: 15px;
-  font-size: 28px;
-  color: #f2f2f2;
+  font-size: 30px;
+  color: #f5f5f5;
 }
 
 /* CARS */
@@ -63,35 +64,35 @@ html, body {
 .cars {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 28px;
   flex-wrap: wrap;
-  margin-bottom: 90px;
+  margin-bottom: 110px;
 }
 
 .car-card {
-  width: 290px;
+  width: 320px;
   transition: 0.4s;
 }
 
 .car-card img {
   width: 100%;
-  height: 210px;
+  height: 230px;
   object-fit: cover;
-  border-radius: 22px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.55);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
 }
 
 .car-card:hover {
-  transform: translateY(-12px) scale(1.03);
+  transform: translateY(-14px) scale(1.03);
 }
 
 /* TITLE */
 
 .section-title {
-  font-size: 52px;
+  font-size: 56px;
   color: #ffd700;
-  margin-bottom: 45px;
-  text-shadow: 0 0 15px rgba(255,215,0,0.25);
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(255,215,0,0.35);
 }
 
 /* PLACES */
@@ -99,45 +100,47 @@ html, body {
 .places {
   display: flex;
   justify-content: center;
-  gap: 28px;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 }
 
 .place-card {
-  width: 290px;
+  width: 320px;
   overflow: hidden;
-  border-radius: 22px;
-  background: rgba(255,255,255,0.07);
+  border-radius: 24px;
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(8px);
   transition: 0.4s;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,215,0,0.15);
 }
 
 .place-card img {
   width: 100%;
-  height: 340px;
+  height: 360px;
   object-fit: cover;
 }
 
 .place-card h3 {
-  padding: 22px;
-  font-size: 30px;
+  padding: 24px;
+  font-size: 32px;
+  color: white;
 }
 
 .place-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
 }
 
 /* CONTACT */
 
 .contact-section {
-  margin-top: 30px;
+  margin-top: 40px;
+  padding-bottom: 90px;
 }
 
 .contact-section h2 {
-  font-size: 44px;
+  font-size: 48px;
   color: #ffd700;
   margin-bottom: 35px;
 }
@@ -145,23 +148,23 @@ html, body {
 .contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 .contact-buttons a {
-  padding: 16px 38px;
-  border-radius: 15px;
+  padding: 18px 40px;
+  border-radius: 16px;
   text-decoration: none;
   color: white;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,215,0,0.3);
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,215,0,0.25);
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .contact-buttons a:hover {
-  background: rgba(255,215,0,0.16);
+  background: rgba(255,215,0,0.18);
   transform: translateY(-5px);
 }
 
@@ -178,11 +181,11 @@ html, body {
   }
 
   .section-title {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .contact-section h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .car-card,
