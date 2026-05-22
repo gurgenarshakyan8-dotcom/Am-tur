@@ -15,8 +15,8 @@ body{
 
 .hero{
   position:relative;
-  min-height:auto;
-  padding:20px 20px 60px;
+  min-height:100vh;
+  padding:2vw 2vw 5vw;
 }
 
 .overlay{
@@ -35,10 +35,10 @@ body{
 .content{
   position:relative;
   z-index:2;
-  width:100%;
-  max-width:1280px;
+
+  width:min(92vw,1500px);
+
   margin:auto;
-  padding-inline:10px;
 }
 
 /* NAVBAR */
@@ -47,14 +47,18 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:30px;
-  gap:20px;
+
+  gap:2vw;
+
+  margin-bottom:4vw;
+
+  flex-wrap:wrap;
 }
 
 .logo h2{
   color:#ffd700;
 
-  font-size:clamp(28px,3vw,42px);
+  font-size:clamp(28px,3vw,50px);
 
   text-shadow:
   0 0 15px rgba(255,215,0,0.5);
@@ -63,12 +67,15 @@ body{
 .navbar ul{
   display:flex;
   list-style:none;
-  gap:28px;
+
+  gap:2vw;
+
   flex-wrap:wrap;
 }
 
 .navbar a{
   color:white;
+
   text-decoration:none;
 
   font-size:clamp(14px,1vw,18px);
@@ -83,31 +90,27 @@ body{
 /* HERO TOP */
 
 .hero-top{
-  min-height:auto;
-
   display:flex;
   flex-direction:column;
   justify-content:center;
-
-  padding-top:10px;
-  padding-bottom:20px;
 
   overflow:hidden;
 }
 
 .hero-text{
   text-align:center;
-  margin-bottom:50px;
+
+  margin-bottom:4vw;
 }
 
 .hero-text h1{
-  font-size:clamp(60px,9vw,120px);
+  font-size:clamp(60px,10vw,150px);
 
   color:#ffd700;
 
-  letter-spacing:clamp(2px,0.5vw,6px);
-
   line-height:1;
+
+  letter-spacing:0.4vw;
 
   text-shadow:
   0 0 10px rgba(255,215,0,0.8),
@@ -116,38 +119,36 @@ body{
 }
 
 .hero-text p{
-  margin-top:14px;
+  margin-top:1vw;
 
-  font-size:clamp(18px,2vw,30px);
+  font-size:clamp(18px,2vw,34px);
 
-  color:white;
-
-  letter-spacing:2px;
+  letter-spacing:0.15vw;
 }
 
 /* CARS */
 
 .cars-wrapper{
   width:100%;
+
   display:flex;
   justify-content:center;
 }
+
 .cars{
+  width:100%;
+
   display:grid;
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(4,1fr);
 
-  gap:18px;
-
-  align-items:end;
-
-  width:min(100%,1200px);
+  gap:1.2vw;
 }
 
 .car-card{
   width:100%;
-  transition:0.45s;
+
+  transition:0.4s;
 }
 
 .car-card img{
@@ -155,37 +156,71 @@ body{
 
   aspect-ratio:1.5/1;
 
-  height:auto;
-
   object-fit:cover;
 
-  border-radius:28px;
+  border-radius:1.4vw;
 
   border:1px solid rgba(255,215,0,0.18);
 
   box-shadow:
-  0 20px 40px rgba(0,0,0,0.75),
-  0 0 20px rgba(255,215,0,0.08);
+  0 1vw 2vw rgba(0,0,0,0.75),
+  0 0 1vw rgba(255,215,0,0.08);
 }
 
 .car-card:hover{
-  transform:translateY(-14px) scale(1.04);
+  transform:translateY(-0.7vw) scale(1.03);
+}
+
+/* INFO BOXES */
+
+.info-boxes{
+  margin-top:4vw;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:1.2vw;
+}
+
+.info-card{
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,215,0,0.15);
+
+  border-radius:1.4vw;
+
+  padding:2vw 1vw;
+
+  text-align:center;
+
+  backdrop-filter:blur(12px);
+
+  transition:0.4s;
+}
+
+.info-card:hover{
+  transform:translateY(-0.5vw);
+}
+
+.info-card h3{
+  font-size:clamp(16px,1.2vw,24px);
 }
 
 /* PLACES */
 
 .places-section{
-  margin-top:90px;
+  margin-top:7vw;
 }
 
 .section-title{
   text-align:center;
 
-  font-size:clamp(36px,5vw,62px);
+  font-size:clamp(36px,5vw,70px);
 
   color:#ffd700;
 
-  margin-bottom:45px;
+  margin-bottom:3vw;
 
   text-shadow:
   0 0 12px rgba(255,215,0,0.5);
@@ -194,41 +229,43 @@ body{
 .places-slider{
   display:flex;
 
-  gap:24px;
+  gap:1.5vw;
 
   overflow-x:auto;
 
-  padding-bottom:22px;
+  padding-bottom:1vw;
 
   scroll-behavior:smooth;
 }
 
 .places-slider::-webkit-scrollbar{
-  height:8px;
+  height:6px;
 }
 
 .places-slider::-webkit-scrollbar-thumb{
   background:#ffd700;
+
   border-radius:10px;
 }
 
 .place-card{
-  min-width:min(320px,85vw);
+  min-width:min(26vw,340px);
 
   background:rgba(255,255,255,0.06);
 
   border:1px solid rgba(255,215,0,0.14);
 
-  border-radius:28px;
+  border-radius:1.5vw;
 
   overflow:hidden;
 
-  transition:0.45s;
+  transition:0.4s;
 
   backdrop-filter:blur(14px);
+}
 
-  box-shadow:
-  0 12px 35px rgba(0,0,0,0.45);
+.place-card:hover{
+  transform:translateY(-0.7vw);
 }
 
 .place-card img{
@@ -236,51 +273,92 @@ body{
 
   aspect-ratio:4/5;
 
-  height:auto;
-
   object-fit:cover;
 }
 
 .place-card h3{
-  padding:22px;
+  padding:1.4vw;
 
-  font-size:clamp(20px,2vw,30px);
-
-  color:white;
+  font-size:clamp(18px,1.5vw,30px);
 }
 
-.place-card:hover{
-  transform:translateY(-12px);
+/* CONTACT */
+
+.contact-section{
+  margin-top:7vw;
+
+  text-align:center;
+}
+
+.contact-section h2{
+  font-size:clamp(28px,3vw,56px);
+
+  margin-bottom:2vw;
+
+  color:#ffd700;
+}
+
+.contact-buttons{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:1vw;
+}
+
+.contact-buttons a{
+  padding:1vw 2vw;
+
+  border-radius:1vw;
+
+  text-decoration:none;
+
+  color:white;
+
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,215,0,0.14);
+
+  transition:0.3s;
+
+  font-size:clamp(14px,1vw,20px);
+}
+
+.contact-buttons a:hover{
+  background:rgba(255,215,0,0.15);
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-body{
-  overflow-x:hidden;
+.hero{
+  padding:20px 14px 60px;
 }
 
 .navbar{
   flex-direction:column;
+
   text-align:center;
+
+  gap:20px;
 }
 
 .navbar ul{
   justify-content:center;
+
   gap:14px;
 }
 
-.hero{
-  padding:20px 14px 50px;
-}
-
 .hero-text{
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .cars{
   grid-template-columns:repeat(2,1fr);
+
   gap:12px;
 }
 
@@ -288,12 +366,49 @@ body{
   border-radius:18px;
 }
 
+.info-boxes{
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px;
+
+  margin-top:25px;
+}
+
+.info-card{
+  border-radius:18px;
+
+  padding:20px 10px;
+}
+
+.places-section{
+  margin-top:60px;
+}
+
 .places-slider{
   gap:16px;
 }
 
 .place-card{
-  min-width:280px;
+  min-width:80%;
+  border-radius:22px;
+}
+
+.place-card h3{
+  padding:18px;
+}
+
+.contact-section{
+  margin-top:60px;
+}
+
+.contact-buttons{
+  gap:12px;
+}
+
+.contact-buttons a{
+  padding:14px 18px;
+
+  border-radius:14px;
 }
 
 }
