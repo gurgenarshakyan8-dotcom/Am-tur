@@ -11,17 +11,25 @@ body{
   overflow-x:hidden;
 }
 
+html,body{
+  width:100%;
+}
+
 /* HERO */
 
 .hero{
   position:relative;
   min-height:100vh;
-  padding:2vw 2vw 5vw;
+  padding:2vw;
+  overflow:hidden;
 }
+
+/* BACKGROUND */
 
 .overlay{
   position:absolute;
   inset:0;
+  z-index:0;
 
   background:
   linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.92)),
@@ -29,15 +37,14 @@ body{
 
   background-size:cover;
   background-position:center;
-  background-attachment:fixed;
 }
+
+/* CONTENT */
 
 .content{
   position:relative;
   z-index:2;
-
   width:min(94vw,1600px);
-
   margin:auto;
 }
 
@@ -47,39 +54,28 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  gap:2vw;
-
-  margin-bottom:4vw;
-
   flex-wrap:wrap;
+  gap:20px;
+  margin-bottom:40px;
 }
 
 .logo h2{
   color:#ffd700;
-
   font-size:clamp(28px,3vw,50px);
-
-  text-shadow:
-  0 0 15px rgba(255,215,0,0.5);
+  text-shadow:0 0 15px rgba(255,215,0,0.5);
 }
 
 .navbar ul{
   display:flex;
   list-style:none;
-
-  gap:2vw;
-
+  gap:20px;
   flex-wrap:wrap;
 }
 
 .navbar a{
   color:white;
-
   text-decoration:none;
-
-  font-size:clamp(14px,1vw,18px);
-
+  font-size:16px;
   transition:0.3s;
 }
 
@@ -87,247 +83,134 @@ body{
   color:#ffd700;
 }
 
-/* HERO TOP */
-
-.hero-top{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-
-  overflow:hidden;
-}
+/* HERO TEXT */
 
 .hero-text{
   text-align:center;
-
-  margin-bottom:4vw;
+  margin-bottom:40px;
 }
 
 .hero-text h1{
-  font-size:clamp(52px,7vw,120px);
-
+  font-size:clamp(48px,7vw,110px);
   color:#ffd700;
-
   line-height:1;
-
-  letter-spacing:0.4vw;
-
-  text-shadow:
-  0 0 10px rgba(255,215,0,0.8),
-  0 0 30px rgba(255,215,0,0.6),
-  0 0 60px rgba(255,215,0,0.35);
+  text-shadow:0 0 25px rgba(255,215,0,0.6);
 }
 
 .hero-text p{
-  margin-top:1vw;
-
-  font-size:clamp(18px,2vw,34px);
-
-  letter-spacing:0.15vw;
+  margin-top:10px;
+  font-size:clamp(18px,2vw,28px);
 }
 
-/* CARS */
-
-.cars-wrapper{
-  width:100%;
-
-  display:flex;
-  justify-content:center;
-}
+/* PLACES GRID */
 
 .cars{
-  width:100%;
-
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
-  gap:0.8vw;
-
-  align-items:stretch;
-}
-
-.car-card{
-  width:100%;
-
-  transition:0.4s;
+  gap:12px;
 }
 
 .car-card img{
   width:100%;
-
   aspect-ratio:16/9;
-
-  max-height:220px;
-
   object-fit:cover;
-
-  border-radius:1.2vw;
-
-  border:1px solid rgba(255,215,0,0.18);
-
-  box-shadow:
-  0 1vw 2vw rgba(0,0,0,0.75),
-  0 0 1vw rgba(255,215,0,0.08);
+  border-radius:14px;
+  transition:0.4s;
 }
 
-.car-card:hover{
-  transform:translateY(-0.7vw) scale(1.03);
+.car-card:hover img{
+  transform:scale(1.05);
 }
 
 /* INFO BOXES */
 
 .info-boxes{
-  margin-top:4vw;
-
+  margin-top:50px;
   display:grid;
-
-  grid-template-columns:repeat(4,minmax(0,1fr));
-
-  gap:1.2vw;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
 .info-card{
   background:rgba(255,255,255,0.06);
-
   border:1px solid rgba(255,215,0,0.15);
-
-  border-radius:1.2vw;
-
-  padding:2vw 1vw;
-
+  border-radius:14px;
+  padding:20px;
   text-align:center;
-
-  backdrop-filter:blur(12px);
-
-  transition:0.4s;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
 }
 
 .info-card:hover{
-  transform:translateY(-0.5vw);
-}
-
-.info-card h3{
-  font-size:clamp(16px,1.2vw,24px);
+  transform:translateY(-5px);
 }
 
 /* PLACES */
 
 .places-section{
-  margin-top:7vw;
+  margin-top:80px;
 }
 
 .section-title{
   text-align:center;
-
   font-size:clamp(36px,5vw,70px);
-
   color:#ffd700;
-
-  margin-bottom:3vw;
-
-  text-shadow:
-  0 0 12px rgba(255,215,0,0.5);
+  margin-bottom:40px;
 }
 
 .places-slider{
   display:flex;
-
-  gap:1.5vw;
-
+  gap:20px;
   overflow-x:auto;
-
-  padding-bottom:1vw;
-
-  scroll-behavior:smooth;
-}
-
-.places-slider::-webkit-scrollbar{
-  height:6px;
-}
-
-.places-slider::-webkit-scrollbar-thumb{
-  background:#ffd700;
-
-  border-radius:10px;
+  padding-bottom:10px;
 }
 
 .place-card{
-  min-width:min(22vw,320px);
-
+  min-width:280px;
   background:rgba(255,255,255,0.06);
-
-  border:1px solid rgba(255,215,0,0.14);
-
-  border-radius:1.4vw;
-
+  border:1px solid rgba(255,215,0,0.15);
+  border-radius:16px;
   overflow:hidden;
-
-  transition:0.4s;
-
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
 }
 
 .place-card:hover{
-  transform:translateY(-0.7vw);
+  transform:translateY(-8px);
 }
 
 .place-card img{
   width:100%;
-
   aspect-ratio:4/5;
-
   object-fit:cover;
 }
 
 .place-card h3{
-  padding:1.4vw;
-
-  font-size:clamp(18px,1.5vw,30px);
+  padding:15px;
 }
 
 /* CONTACT */
 
 .contact-section{
-  margin-top:7vw;
-
+  margin-top:80px;
   text-align:center;
-}
-
-.contact-section h2{
-  font-size:clamp(28px,3vw,56px);
-
-  margin-bottom:2vw;
-
-  color:#ffd700;
 }
 
 .contact-buttons{
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
-  gap:1vw;
+  gap:15px;
 }
 
 .contact-buttons a{
-  padding:1vw 2vw;
-
-  border-radius:1vw;
-
+  padding:14px 20px;
+  border-radius:12px;
   text-decoration:none;
-
   color:white;
-
   background:rgba(255,255,255,0.06);
-
-  border:1px solid rgba(255,215,0,0.14);
-
+  border:1px solid rgba(255,215,0,0.15);
   transition:0.3s;
-
-  font-size:clamp(14px,1vw,20px);
 }
 
 .contact-buttons a:hover{
@@ -338,90 +221,16 @@ body{
 
 @media(max-width:768px){
 
-.hero{
-  padding:20px 14px 60px;
-}
-
-.navbar{
-  flex-direction:column;
-
-  text-align:center;
-
-  gap:20px;
-}
-
-.navbar ul{
-  justify-content:center;
-
-  gap:14px;
-}
-
-.hero-text{
-  margin-bottom:30px;
-}
-
-.hero-text h1{
-  font-size:56px;
-}
-
-.hero-text p{
-  font-size:20px;
-}
-
 .cars{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-
-  gap:12px;
-}
-
-.car-card img{
-  border-radius:18px;
+  grid-template-columns:repeat(2,1fr);
 }
 
 .info-boxes{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-
-  gap:12px;
-
-  margin-top:25px;
+  grid-template-columns:repeat(2,1fr);
 }
 
-.info-card{
-  border-radius:18px;
-
-  padding:20px 10px;
-}
-
-.places-section{
-  margin-top:60px;
-}
-
-.places-slider{
-  gap:16px;
-}
-
-.place-card{
-  min-width:80%;
-
-  border-radius:22px;
-}
-
-.place-card h3{
-  padding:18px;
-}
-
-.contact-section{
-  margin-top:60px;
-}
-
-.contact-buttons{
-  gap:12px;
-}
-
-.contact-buttons a{
-  padding:14px 18px;
-
-  border-radius:14px;
+.hero-text h1{
+  font-size:52px;
 }
 
 }
