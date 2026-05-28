@@ -10,9 +10,7 @@ html,body{
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#05070f;
-  color:white;
+background:red !important;
 }
 
 /* HERO */
