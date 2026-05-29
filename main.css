@@ -183,7 +183,13 @@ grid-template-columns:repeat(2,1fr);
 .info-boxes{
 grid-template-columns:repeat(2,1fr);
 }
-
+  
+.info-card{
+padding:14px;
+min-height:80px;
+font-size:14px;
+}
+  
 .hero-text h1{
 font-size:42px;
 }
