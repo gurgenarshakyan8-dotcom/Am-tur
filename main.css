@@ -92,14 +92,14 @@ display:grid;
 
 grid-template-columns:
 repeat(
-auto-fit,
-minmax(
-220px,
+2,
 1fr
-)
 );
 
-gap:12px;
+gap:10px;
+
+width:100%;
+
 }
 
 .car-card img{
@@ -274,6 +274,27 @@ padding:20px 14px;
 
 .hero-text h1{
 font-size:56px;
+}
+
+}
+@media(max-width:768px){
+
+.cars{
+
+grid-template-columns:
+repeat(
+2,
+1fr
+);
+
+gap:8px;
+
+}
+
+.car-card img{
+
+aspect-ratio:16/10;
+
 }
 
 }
