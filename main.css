@@ -6,30 +6,36 @@ box-sizing:border-box;
 
 html,body{
 width:100%;
-min-height:100%;
 overflow-x:hidden;
 font-family:Arial,sans-serif;
 background:#05070f;
 color:white;
 }
 
-/* SECTIONS */
+/* GLOBAL */
+
 section{
 width:100%;
-display:block;
-padding:60px 20px;
+padding:40px 20px;
 }
 
 /* HERO */
+
 .hero{
-min-height:100vh;
+
 display:flex;
 align-items:center;
 justify-content:center;
-padding:20px;
+
+padding:80px 20px 50px;
+
 background:
-linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.85)),
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.85)
+),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2200&auto=format&fit=crop");
+
 background-size:cover;
 background-position:center;
 }
@@ -37,64 +43,56 @@ background-position:center;
 .content{
 width:100%;
 max-width:1200px;
-margin:0 auto;
+margin:auto;
 text-align:center;
 }
 
 .hero-text h1{
-font-size:clamp(40px,6vw,90px);
+
+font-size:
+clamp(
+42px,
+6vw,
+90px
+);
+
 color:#ffd700;
 }
 
 .hero-text p{
-font-size:clamp(16px,2vw,26px);
-}
 
-/* CARS */
-.cars{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-max-width:1200px;
-margin:0 auto;
-}
+font-size:
+clamp(
+18px,
+2vw,
+26px
+);
 
-.car-card img{
-width:100%;
-display:block;
-aspect-ratio:16/9;
-object-fit:cover;
-border-radius:14px;
-}
-
-/* INFO */
-.info-boxes{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-margin-top:20px;
-}
-
-.info-card{
-padding:18px;
-border-radius:14px;
-text-align:center;
-background:rgba(255,255,255,0.06);
-border:1px solid rgba(255,215,0,0.15);
-transition:0.3s;
-}
-
-.info-card:hover{
-transform:translateY(-5px);
+margin-top:10px;
 }
 
 /* PLACES */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#ffd700;
+}
+
 .places-slider{
+
 display:flex;
+
 gap:15px;
+
 overflow-x:auto;
-scroll-snap-type:x mandatory;
+
 padding-bottom:10px;
+
+scroll-snap-type:x mandatory;
 }
 
 .places-slider::-webkit-scrollbar{
@@ -102,42 +100,134 @@ display:none;
 }
 
 .place-card{
+
 min-width:260px;
+
 flex:0 0 auto;
+
 scroll-snap-align:start;
+
 border-radius:16px;
+
 overflow:hidden;
-background:rgba(255,255,255,0.06);
+
+background:
+rgba(
+255,
+255,
+255,
+.06
+);
 }
 
 .place-card img{
+
 width:100%;
+
 height:180px;
+
 object-fit:cover;
 }
 
 .place-card h3{
+
 padding:12px;
+
 text-align:center;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* CARS */
 
 .cars{
-grid-template-columns:repeat(2,1fr);
-gap:8px;
+
+display:grid;
+
+grid-template-columns:
+repeat(
+2,
+1fr
+);
+
+gap:12px;
+
+max-width:1200px;
+
+margin:auto;
 }
+
+.car-card img{
+
+width:100%;
+
+display:block;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
+
+border-radius:14px;
+}
+
+/* FEATURES */
 
 .info-boxes{
-grid-template-columns:repeat(2,1fr);
+
+display:grid;
+
+grid-template-columns:
+repeat(
+2,
+1fr
+);
+
+gap:12px;
+
+margin-top:20px;
 }
 
+.info-card{
+
+padding:18px;
+
+border-radius:14px;
+
+text-align:center;
+
+background:
+rgba(
+255,
+255,
+255,
+.06
+);
+
+border:
+1px solid rgba(
+255,
+215,
+0,
+.15
+);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
 section{
-padding:40px 14px;
+padding:30px 14px;
+}
+
+.hero{
+padding:60px 14px 30px;
 }
 
 .hero-text h1{
 font-size:38px;
 }
+
+.cars{
+gap:8px;
+}
+
 }
