@@ -24,17 +24,20 @@ body{
 
   width:100%;
 
+  min-height:100vh;
+
   padding:2vw;
 
-  overflow:visible;
+  display:flex;
+  flex-direction:column;
+
+  gap:40px;
 }
 
 /* BACKGROUND */
 
 .overlay{
-
   position:absolute;
-
   top:0;
   left:0;
 
@@ -45,19 +48,14 @@ body{
 
   background:
   linear-gradient(
-  rgba(0,0,0,.60),
-  rgba(0,0,0,.92)
+    rgba(0,0,0,.60),
+    rgba(0,0,0,.92)
   ),
-
-  url(
-'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2200&auto=format&fit=crop'
-);
+  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2200&auto=format&fit=crop');
 
   background-size:cover;
-
   background-position:center;
 }
-
 /* CONTENT */
 
 .content{
