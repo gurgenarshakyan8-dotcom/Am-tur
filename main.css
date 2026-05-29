@@ -1,60 +1,157 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 html,body{
 width:100%;
-height:100%;
+min-height:100%;
 overflow-x:hidden;
-overflow-y:auto;
+font-family:Arial,sans-serif;
+background:#05070f;
+color:white;
 }
 
-/* IMPORTANT: disable weird horizontal scroll everywhere */
+/* GLOBAL SECTIONS */
 section{
 width:100%;
-max-width:100%;
-overflow:hidden;
+padding:30px 16px;
+display:block;
 }
 
-/* MOBILE FULL SCREEN SECTIONS */
-@media(max-width:768px){
-
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
+url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2200&auto=format&fit=crop");
+
+background-size:cover;
+background-position:center;
 }
 
-/* make sections compact */
+/* CONTENT */
+.content{
+width:100%;
+max-width:1100px;
+margin:0 auto;
+}
+
+/* HERO TEXT */
+.hero-text h1{
+font-size:clamp(36px,6vw,80px);
+color:#ffd700;
+}
+
+.hero-text p{
+font-size:clamp(16px,2vw,24px);
+margin-top:10px;
+}
+
+/* SECTION TITLE */
+.section-title{
+text-align:center;
+margin-bottom:15px;
+color:#ffd700;
+}
+
+/* PLACES */
+.places-slider{
+display:flex;
+gap:12px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+padding-bottom:10px;
+}
+
+.places-slider::-webkit-scrollbar{
+display:none;
+}
+
+.place-card{
+min-width:260px;
+flex:0 0 auto;
+scroll-snap-align:start;
+border-radius:14px;
+overflow:hidden;
+background:rgba(255,255,255,0.06);
+}
+
+.place-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.place-card h3{
+padding:10px;
+text-align:center;
+}
+
+/* CARS */
+.cars{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+max-width:1100px;
+margin:0 auto;
+}
+
+.car-card img{
+width:100%;
+display:block;
+border-radius:12px;
+aspect-ratio:16/9;
+object-fit:cover;
+}
+
+/* INFO BOXES */
+.info-boxes{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:15px;
+}
+
+.info-card{
+padding:14px;
+text-align:center;
+border-radius:12px;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,215,0,0.15);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
 section{
-padding:25px 14px;
+padding:25px 12px;
 }
 
-/* cars + info stacked clean */
+.hero{
+min-height:100vh;
+padding:40px 12px;
+}
+
 .cars{
 grid-template-columns:1fr;
-gap:10px;
 }
 
 .info-boxes{
 grid-template-columns:1fr 1fr;
 }
 
-/* ONLY places scroll stays horizontal */
-.places-slider{
-display:flex;
-overflow-x:auto;
-overflow-y:hidden;
-scroll-snap-type:x mandatory;
-gap:12px;
-}
-
 .place-card{
 min-width:80%;
-flex:0 0 auto;
-scroll-snap-align:start;
 }
 
-/* remove body sideways scroll completely */
-body{
-overflow-x:hidden;
+.hero-text h1{
+font-size:34px;
 }
 }
