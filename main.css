@@ -50,6 +50,10 @@ font-size:clamp(16px,2vw,26px);
 
 /* CARS */
 
+section{
+padding:40px 20px;
+}
+
 .cars{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -58,8 +62,6 @@ gap:10px;
 
 .car-card img{
 width:100%;
-aspect-ratio:16/9;
-object-fit:cover;
 border-radius:14px;
 }
 
