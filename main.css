@@ -48,20 +48,32 @@ color:#ffd700;
 font-size:clamp(16px,2vw,26px);
 }
 
-/* CARS */
+/* GLOBAL SECTION */
 
 section{
-padding:40px 20px;
+padding:60px 20px;
 }
+
+/* CARS */
 
 .cars{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
+gap:12px;
+max-width:1200px;
+margin:0 auto;
+}
+
+.car-card{
+overflow:hidden;
+border-radius:14px;
 }
 
 .car-card img{
 width:100%;
+display:block;
+aspect-ratio:16/9;
+object-fit:cover;
 border-radius:14px;
 }
 
@@ -80,20 +92,17 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 gap:8px;
-
 padding:18px;
-
 border-radius:14px;
-
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,215,0,0.15);
 backdrop-filter:blur(10px);
 text-align:center;
+transition:0.3s;
 }
 
 .info-card:hover{
 transform:translateY(-5px);
-transition:0.3s;
 }
 
 /* ICONS */
@@ -105,23 +114,10 @@ fill:#ffd700;
 filter:drop-shadow(0 0 6px rgba(255,215,0,0.5));
 }
 
-/* MOBILE */
+/* PLACES (IMPORTANT → NOT INSIDE MEDIA QUERY) */
 
-@media(max-width:768px){
-
-.cars{
-grid-template-columns:repeat(2,1fr);
-}
-
-.info-boxes{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero-text h1{
-font-size:38px;
-}
-  .places-section{
-padding:40px 20px;
+.places-section{
+padding:60px 20px;
 }
 
 .section-title{
@@ -162,6 +158,27 @@ object-fit:cover;
 .place-card h3{
 padding:12px;
 text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.cars{
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.info-boxes{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+section{
+padding:40px 14px;
 }
 
 }
