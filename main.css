@@ -6,17 +6,16 @@ box-sizing:border-box;
 
 html,body{
 width:100%;
-min-height:100%;
 overflow-x:hidden;
 font-family:Arial,sans-serif;
 background:#05070f;
 color:white;
 }
 
-/* GLOBAL SECTIONS */
+/* PAGE FLOW */
 section{
 width:100%;
-padding:30px 16px;
+padding:60px 20px;
 display:block;
 }
 
@@ -27,44 +26,24 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2200&auto=format&fit=crop");
-
 background-size:cover;
 background-position:center;
 }
 
-/* CONTENT */
-.content{
-width:100%;
-max-width:1100px;
-margin:0 auto;
-}
-
-/* HERO TEXT */
-.hero-text h1{
-font-size:clamp(36px,6vw,80px);
-color:#ffd700;
-}
-
-.hero-text p{
-font-size:clamp(16px,2vw,24px);
-margin-top:10px;
-}
-
-/* SECTION TITLE */
+/* TITLES */
 .section-title{
 text-align:center;
-margin-bottom:15px;
+margin-bottom:20px;
 color:#ffd700;
 }
 
-/* PLACES */
+/* PLACES (HORIZONTAL ONLY HERE) */
 .places-slider{
 display:flex;
-gap:12px;
+gap:15px;
 overflow-x:auto;
 scroll-snap-type:x mandatory;
 padding-bottom:10px;
@@ -85,20 +64,15 @@ background:rgba(255,255,255,0.06);
 
 .place-card img{
 width:100%;
-height:170px;
+height:180px;
 object-fit:cover;
 }
 
-.place-card h3{
-padding:10px;
-text-align:center;
-}
-
-/* CARS */
+/* CARS (GRID) */
 .cars{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
+gap:12px;
 max-width:1100px;
 margin:0 auto;
 }
@@ -111,16 +85,17 @@ aspect-ratio:16/9;
 object-fit:cover;
 }
 
-/* INFO BOXES */
+/* INFO */
 .info-boxes{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
-margin-top:15px;
+gap:12px;
+max-width:1100px;
+margin:0 auto;
 }
 
 .info-card{
-padding:14px;
+padding:16px;
 text-align:center;
 border-radius:12px;
 background:rgba(255,255,255,0.06);
@@ -131,12 +106,7 @@ border:1px solid rgba(255,215,0,0.15);
 @media(max-width:768px){
 
 section{
-padding:25px 12px;
-}
-
-.hero{
-min-height:100vh;
-padding:40px 12px;
+padding:35px 14px;
 }
 
 .cars{
@@ -148,10 +118,10 @@ grid-template-columns:1fr 1fr;
 }
 
 .place-card{
-min-width:80%;
+min-width:85%;
 }
 
-.hero-text h1{
-font-size:34px;
+.hero{
+min-height:100vh;
 }
 }
