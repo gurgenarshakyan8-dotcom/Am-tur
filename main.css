@@ -369,6 +369,10 @@ color:white;
 
 @media(max-width:768px){
 
+.car-card img{
+height:150px;
+}
+
 .hero{
 
 padding-top:110px;
