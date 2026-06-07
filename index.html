@@ -396,34 +396,58 @@ document
 
 </script>
 
+<div class="floating-contact">
 
-<div class="contact-buttons">
+<div class="contact-menu" id="contactMenu">
 
 <a
 href="https://wa.me/YOURNUMBER"
 target="_blank"
-class="contact-btn whatsapp"
 >
 
-W
+WhatsApp
 
 </a>
 
 <a
 href="viber://chat?number=YOURNUMBER"
-class="contact-btn viber"
 >
 
-V
+Viber
 
 </a>
 
 </div>
 
 
-</body>
+<button
+class="call-btn"
+onclick="toggleMenu()"
+>
 
-</html>
+☎
+
+</button>
+
+</div>
+
+
+<script>
+
+function toggleMenu(){
+
+const menu=
+document.getElementById(
+"contactMenu"
+)
+
+menu.classList.toggle(
+"show-menu"
+)
+
+}
+
+</script>
 </body>
 
 </html>
