@@ -442,59 +442,102 @@ padding:18px 8px;
 height:32vh;
 
 }
-.contact-buttons{
+.floating-contact{
 
 position:fixed;
 
-right:18px;
+right:20px;
 
-bottom:18px;
-
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
+bottom:20px;
 
 z-index:9999;
 
 }
 
-.contact-btn{
+.call-btn{
 
-width:60px;
+width:65px;
 
-height:60px;
+height:65px;
+
+border:none;
 
 border-radius:50%;
 
+font-size:28px;
+
+cursor:pointer;
+
+background:#ffd700;
+
+color:black;
+
+box-shadow:
+0 5px 20px
+rgba(
+0,
+0,
+0,
+0.35
+);
+
+}
+
+.contact-menu{
+
 display:flex;
 
-align-items:center;
+flex-direction:column;
 
-justify-content:center;
+gap:10px;
 
-font-size:26px;
+margin-bottom:10px;
 
-font-weight:bold;
+opacity:0;
+
+pointer-events:none;
+
+transform:
+translateY(
+20px
+);
+
+transition:.3s;
+
+}
+
+.contact-menu a{
+
+padding:12px 18px;
+
+border-radius:12px;
 
 text-decoration:none;
 
+background:
+rgba(
+20,
+20,
+20,
+0.95
+);
+
 color:white;
 
-box-shadow:0 4px 15px rgba(0,0,0,.35);
+text-align:center;
 
 }
 
-.whatsapp{
+.show-menu{
 
-background:#25D366;
+opacity:1;
 
-}
+pointer-events:auto;
 
-.viber{
-
-background:#7360F2;
+transform:
+translateY(
+0
+);
 
 }
 }
