@@ -118,8 +118,9 @@ gap:10px;
 }
 
 .car-card{
-overflow:hidden;
 border-radius:16px;
+overflow:hidden;
+background:#000;
 }
 
 .car-card img{
