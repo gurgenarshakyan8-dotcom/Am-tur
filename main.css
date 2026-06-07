@@ -231,15 +231,11 @@ border-radius:16px;
 }
 
 .car-card img{
-
 width:100%;
-
-display:block;
-
-aspect-ratio:16/11;
-
+height:180px;
 object-fit:cover;
-
+display:block;
+border-radius:14px;
 }
 
 /* INFO */
